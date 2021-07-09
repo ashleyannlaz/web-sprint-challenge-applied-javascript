@@ -1,6 +1,5 @@
 const Card = (article) => {
-  // TASK 5
-  // ---------------------
+  // TASK 5  ---------------------
   // Implement this function, which should return the markup you see below.
   // It takes as its only argument an "article" object with `headline`, `authorPhoto` and `authorName` properties.
   // The tags used, the hierarchy of elements and their attributes must match the provided markup exactly!
@@ -17,6 +16,32 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+  const cardsDiv = document.createElement('div');
+  cardsDiv.classList.add('card');
+
+    const headLine = document.createElement('div');
+    const author = document.createElement('div');
+    const imgContain = document.createElement('div')
+    const imgAuthor = document.createElement('img');
+    const authorName = document.createElement('span');
+
+    headLine.classList.add('headline');
+    author.classList.add('author');
+    imgContain.classList.add('img-container');
+
+    headLine.textContent = article.headline;
+    imgAuthor.src = article.authorPhoto;
+    authorName.textContent = `By ${article.authorName}`;
+
+    cardsDiv.appendChild(headLine);
+    cardsDiv.appendChild(author);
+    author.appendChild(imgContain);
+    imgContain.appendChild(imgAuthor);
+    author.appendChild(authorName);
+
+    
+
+  return cardsDiv;
 }
 
 const cardAppender = (selector) => {
@@ -28,6 +53,33 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
+  const axios = require('axios');
+  const sel = document.querySelector(selector);
+  // Importing array data
+  axios.get('http://localhost:5000/api/articles')
+  .then(function (response) { // handle success
+     const bs = response.data.articles.bootstrap;
+     bs.forEach(arts => {
+      sel.appendChild(Card(arts)); 
+     })
+     const js = response.data.articles.javascript;
+     js.forEach(arts => {
+      sel.appendChild(Card(arts)); 
+     })
+     const jq = response.data.articles.jquery;
+     jq.forEach(arts => {
+      sel.appendChild(Card(arts)); 
+     })
+     const node = response.data.articles.node;
+     node.forEach(arts => {
+      sel.appendChild(Card(arts)); 
+     })
+     const ty = response.data.articles.technology;
+     ty.forEach(arts => {
+      sel.appendChild(Card(arts)); 
+     })
+    console.log(response); 
+  })
 }
 
 export { Card, cardAppender }

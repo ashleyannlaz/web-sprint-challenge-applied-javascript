@@ -12,11 +12,10 @@ const Tabs = (topics) => {
   // </div>
   const topicsDiv = document.createElement('div');
   topicsDiv.classList.add('topics');
-  const tops = '';
-  topics.forEach(topic => {
+  topics.forEach(topics => {
     const tab = document.createElement('div');
     tab.classList.add('tab');
-    tab.textContent = topic;
+    tab.textContent = topics;
     topicsDiv.appendChild(tab);
   })
    return topicsDiv;
