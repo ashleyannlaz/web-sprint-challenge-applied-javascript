@@ -10,11 +10,11 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option.
-- [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [x] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [x] Open the assignment in Canvas and click on the "Set up git" option.
+- [x] Follow instructions to set up Codegrade's Webhook and Deploy Key.
+- [x] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
+- [x] Check to see that Codegrade has accepted your git submission.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 
@@ -38,9 +38,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 **Steps Required for MVP:**
 
-- [ ] Steps 1 and 2 are explained inside the `src/components/header.js` file.
-- [ ] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
-- [ ] Steps 5 and 6 are explained inside the `src/components/card.js` file.
+- [x] Steps 1 and 2 are explained inside the `src/components/header.js` file.
+- [x] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
+- [x] Steps 5 and 6 are explained inside the `src/components/card.js` file.
 
 **Important Notes:**
 
@@ -65,7 +65,12 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+    The DOM is a logical tree like model that organizes the web page HTML Document as an object.
 2. What is an event?
+    Events are interactions that happen to the HTML elements either by the user or the browser. For example, a click or the web page loads.
 3. What is an event listener?
+    An event listener "listens" for these events. An event listener function takes two arguments: the event to listen for and the callback to fire when the event is triggered. This allows JavaScript to react to those events.
 4. Why would we convert a NodeList into an Array?
+    Even though the NodeList has access to .forEach and .length, it doesn't have access to other array methods like push(), pop(), etc. Converting it allows you to access all of the array methods.
 5. What is a component?
+    Components are self contained elements that are visual and interactive, but most importantly they are reusable. 
